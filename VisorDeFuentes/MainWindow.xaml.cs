@@ -24,5 +24,45 @@ namespace VisorDeFuentes
         {
             InitializeComponent();
         }
+
+        private void fuenteComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cursivasCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cursivasCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void negritasCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void negritasCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void smallRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mediumRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void largeRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

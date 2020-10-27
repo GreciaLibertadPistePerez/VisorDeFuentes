@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisorDeFuentes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Visor de Fuentes" Height="350" Width="500">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="4,8,12,8" BorderThickness="1" BorderBrush="LightBlue">
+            <DockPanel>
+            <TextBlock Text="Instituto Tecnológico de Campeche" x:Name="leyendaTexBlock" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="12"/>
+            </DockPanel>
+        </Border>
+
+        <GroupBox Grid.Row="1" Grid.Column="0" Header="Fuente" BorderBrush="LightBlue" BorderThickness="1" Margin="8,4,4,8">
+            <ComboBox x:Name="fuenteComboBox" VerticalAlignment="Top" Margin="4" SelectedIndex="0" SelectionChanged="fuenteComboBox_SelectionChanged">
+                
+                <ComboBoxItem Content="Arial"/>
+                <ComboBoxItem Content="Consolas"/>
+                <ComboBoxItem Content="Time New Roman"/>
+                <ComboBoxItem Content="Verdana"/>
+            </ComboBox>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Estilo" BorderBrush="LightBlue" BorderThickness="1" Margin="4,4,4,8">
+            <StackPanel>
+                <CheckBox Content="Cursiva" Margin="8,8,8,4" x:Name="cursivasCheckBox" Checked="cursivasCheckBox_Checked" Unchecked="cursivasCheckBox_Unchecked"/>
+                <CheckBox Content="Negritas" Margin="8,4,8,8" x:Name="negritasCheckBox" Checked="negritasCheckBox_Checked" Unchecked="negritasCheckBox_Unchecked"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Grid.Column="2" Header="Tamaño" BorderBrush="LightBlue" BorderThickness="1" Margin="4,4,8,8">
+
+            <StackPanel>
+                <RadioButton x:Name="smallRadioButton" Content="pequeña" Margin="8,8,8,4" IsChecked="True" Checked="smallRadioButton_Checked"/>
+                <RadioButton x:Name="mediumRadioButton" Content="mediana" Margin="8,4,8,4" IsChecked="False" Checked="mediumRadioButton_Checked"/>
+                <RadioButton x:Name="largeRadioButton" Content="Grande" Margin="8,4,8,8" IsChecked="False" Checked="largeRadioButton_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        
     </Grid>
 </Window>
